@@ -20,12 +20,12 @@ export default function FirstForm() {
     ];
 
     return (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} className="needs-validation" noValidate>
             <TextInputField label="First Name" name="firstName" register={register} required minLength="2" maxLength="10" errors={errors.firstName} />
             <TextInputField label="Last Name" name="lastName" register={register} required minLength="3" maxLength="20" errors={errors.lastName} />
             <NumberInputField label="Age" name="age" register={register} required min="1" max="100" errors={errors.age}></NumberInputField>
             <SelectField label="Gender" name="gender" options={genderOptions} register={register}></SelectField>
-            <input type="submit" />
+            <input type="submit" className="btn btn-primary" />
         </form>
     );
 }
