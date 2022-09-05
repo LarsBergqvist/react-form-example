@@ -11,3 +11,12 @@
     border-left-width: 10px;
     border-left-color: red;
 }
+
+.container {
+    display: flex
+}
+
+.the-form {
+    width: 50%;
+    min-width: 200px;
+}

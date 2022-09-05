@@ -3,7 +3,9 @@ import FirstForm from './FirstForm';
 
 function App() {
     return (
-        <FirstForm></FirstForm>
+        <div className="container">
+            <FirstForm className="the-form"></FirstForm>
+        </div>
     );
 }
 
