@@ -1,10 +1,10 @@
 import './App.css';
-import FirstForm from './FirstForm';
+import { PersonFormView } from './PersonForm';
 
 function App() {
     return (
         <div className="container">
-            <FirstForm className="the-form"></FirstForm>
+            <PersonFormView className="the-form" />
         </div>
     );
 }

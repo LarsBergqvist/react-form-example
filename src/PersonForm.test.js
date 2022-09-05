@@ -1,8 +1,9 @@
 import { render, screen } from '@testing-library/react';
-import FirstForm from './FirstForm';
+import { PersonForm } from './PersonForm';
 
-test('renders FirstForm', () => {
-    render(<FirstForm />);
+
+test('renders PersonForm', () => {
+    render(<PersonForm />);
     const firstNameInput = screen.getByLabelText(/First name/i);
     expect(firstNameInput).toBeInTheDocument();
     expect(firstNameInput.outerHTML).toContain('<input');
