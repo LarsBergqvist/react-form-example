@@ -1,4 +1,4 @@
-import { ErrorMessage } from "./ErrorMessage";
+import { ErrorMessage } from "../ErrorMessage";
 
 export const TextInputField = ({ label, name, register, required, minLength, maxLength, errors }) => (
     <div>

@@ -3,10 +3,10 @@ import { useForm } from "react-hook-form";
 import { connect } from "react-redux";
 import { NumberInputField } from "./NumberInputField";
 import { SelectField } from "./SelectField";
-import { savePerson } from "./store/personReducer";
+import { savePerson } from "../store/personReducer";
 import { TextInputField } from "./TextInputField";
 
-const PersonForm = (data) => {
+const PersonForm = (props) => {
     const { register, handleSubmit, formState } = useForm({
         mode: "all"
     });
@@ -23,13 +23,14 @@ const PersonForm = (data) => {
     ];
 
     const getResult = () => {
-        if (!data || !data.firstName) return "";
-        return `Name: ${data.firstName} ${data.lastName}, Age: ${data.age}, Gender: ${data.gender}`;
+        if (!props || !props.firstName) return "";
+        return `Name: ${props.firstName} ${props.lastName}, Age: ${props.age}, Gender: ${props.gender}`;
     }
 
     return (
         <div>
-            <form onSubmit={handleSubmit(data.onSubmit)} className="needs-validation" noValidate>
+            <h3>react-hook form</h3>
+            <form onSubmit={handleSubmit(props.onSubmit)} className="needs-validation" noValidate>
                 <TextInputField label="First name" name="firstName" register={register} required minLength="2" maxLength="10" errors={formState.errors.firstName} />
                 <TextInputField label="Last name" name="lastName" register={register} required minLength="3" maxLength="20" errors={formState.errors.lastName} />
                 <NumberInputField label="Age" name="age" register={register} required min="1" max="100" errors={formState.errors.age}></NumberInputField>
