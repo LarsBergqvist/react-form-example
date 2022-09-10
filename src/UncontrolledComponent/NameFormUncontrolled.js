@@ -16,9 +16,11 @@ export class NameFormUncontrolled extends React.Component {
         return (
             <div>
                 <h3>Uncontrolled component</h3>
-                <form className='form-group' onSubmit={this.handleSubmit}>
-                    <label htmlFor="fullName">Name:</label>
-                    <input name="fullName" className='form-control' type="text" ref={this.input} />
+                <form onSubmit={this.handleSubmit}>
+                    <div className='form-group'>
+                        <label htmlFor="fullName">Name:</label>
+                        <input name="fullName" className='form-control' type="text" ref={this.input} />
+                    </div>
                     <input type="submit" className="btn btn-primary" value="Submit" />
                 </form>
             </div>

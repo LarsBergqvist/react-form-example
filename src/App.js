@@ -1,5 +1,5 @@
 import './App.css';
-import { NameFormControlled } from './ControlledComponent/NameFormControlled';
+import { FormControlled } from './ControlledComponent/FormControlled';
 import { NameFormUncontrolled } from './UncontrolledComponent/NameFormUncontrolled';
 import { PersonFormView } from './ReactHookFormComponent/PersonForm';
 
@@ -11,11 +11,11 @@ function App() {
             </div>
             <hr />
             <div className="container">
-                <NameFormControlled className="the-form"></NameFormControlled>
+                <FormControlled className="the-form" />
             </div>
             <hr />
             <div className="container">
-                <NameFormUncontrolled></NameFormUncontrolled>
+                <NameFormUncontrolled />
             </div>
         </div>
     );
