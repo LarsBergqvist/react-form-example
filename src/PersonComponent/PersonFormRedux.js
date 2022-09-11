@@ -15,6 +15,7 @@ const mapStateToProps = state => {
     return {
         firstName: state.person.firstName,
         lastName: state.person.lastName,
+        email: state.person.email,
         age: state.person.age,
         gender: state.person.gender
     }

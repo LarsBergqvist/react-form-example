@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ErrorMessage } from "../ErrorMessage";
+import { ErrorMessage } from "../FormControls/ErrorMessage";
 
 export function FormControlled() {
     const [fullName, setFullName] = useState("");

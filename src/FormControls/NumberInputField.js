@@ -1,4 +1,4 @@
-import { ErrorMessage } from "../ErrorMessage";
+import { ErrorMessage } from "./ErrorMessage";
 
 export const NumberInputField = ({ label, name, register, required, min, max, errors }) => (
     <div className="form-group">
