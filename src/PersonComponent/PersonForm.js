@@ -20,11 +20,6 @@ const PersonForm = (props) => {
         { value: 'Male', text: 'male' }
     ];
 
-    const getResult = () => {
-        if (!props || !props.firstName) return "";
-        return `Name: ${props.firstName} ${props.lastName}, Email: ${props.email}, Age: ${props.age}, Gender: ${props.gender}`;
-    }
-
     const emailRegEx = /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/;
     const matchAllRegEx = /.*/;
 
@@ -50,7 +45,6 @@ const PersonForm = (props) => {
                 {formState.isValid && <input type="submit" value="Submit" className="btn btn-primary" />}
                 {!formState.isValid && <input type="submit" value="Submit" className="btn btn-primary" disabled />}
             </form>
-            {getResult()}
         </div>
     );
 }
