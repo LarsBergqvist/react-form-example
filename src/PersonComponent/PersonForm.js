@@ -1,9 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { connect } from "react-redux";
 import { NumberInputField } from "./NumberInputField";
 import { SelectField } from "./SelectField";
-import { savePerson } from "../store/personReducer";
 import { TextInputField } from "./TextInputField";
 
 const PersonForm = (props) => {
@@ -43,26 +41,4 @@ const PersonForm = (props) => {
     );
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-        onSubmit: data => {
-            dispatch(savePerson(data));
-        }
-    }
-}
-
-const mapStateToProps = state => {
-    return {
-        firstName: state.person.firstName,
-        lastName: state.person.lastName,
-        age: state.person.age,
-        gender: state.person.gender
-    }
-}
-
-const PersonFormView = connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(PersonForm)
-
-export { PersonForm, PersonFormView };
+export default PersonForm;

@@ -1,13 +1,13 @@
 import './App.css';
 import { FormControlled } from './ControlledComponent/FormControlled';
 import { NameFormUncontrolled } from './UncontrolledComponent/NameFormUncontrolled';
-import { PersonFormView } from './ReactHookFormComponent/PersonForm';
+import PersonFormRedux from './PersonComponent/PersonFormRedux';
 
 function App() {
     return (
         <div className="app-container">
             <div className="container">
-                <PersonFormView className="the-form" />
+                <PersonFormRedux className="the-form" />
             </div>
             <hr />
             <div className="container">

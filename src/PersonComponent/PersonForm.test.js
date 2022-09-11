@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { PersonForm } from './PersonForm';
+import PersonForm from './PersonForm';
 
 
 test('renders PersonForm', () => {
