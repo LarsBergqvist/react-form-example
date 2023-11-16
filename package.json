@@ -2,6 +2,7 @@
   "name": "react-form-example",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://larsbergqvist.github.io/react-form-example/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.1",
     "@testing-library/jest-dom": "^5.16.5",
