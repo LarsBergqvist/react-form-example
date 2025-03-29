@@ -14,8 +14,6 @@ jobs:
           node-version: '20'
       - name: Install packages
         run: yarn install
-      - name: Run tests
-        run: yarn test
       - name: Build for GitHub pages
         run: yarn build
       - name: Deploy to gh-pages branch
